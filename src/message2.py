@@ -51,3 +51,29 @@ def decrypte_pangramme(message: str) -> str:
         if caractere.isalpha() and caractere not in message_decrypte:
             message_decrypte += caractere
     return message_decrypte
+
+
+def decrypte_substitution(message: str, cle: str) -> str | None:
+    """
+    Fonction permettant de déchiffrer un message chiffré par la méthode de substitution
+
+    Args:
+        message (str): Le message chiffré à déchiffrer
+        cle (str): La clé de chiffrement
+
+    Returns:
+        str: Le message décrypté
+    """
+    if len(cle) != const.NOMBRE_LETTRES_ALPHABET:
+        return None
+    dico = {}
+    for index, lettre in enumerate(cle):
+        dico[lettre] = chr(index + ord("A"))
+        dico[lettre.lower()] = chr(index + ord("A")).lower()
+    message_decrypte = ""
+    for lettre in message:
+        if lettre.isalpha():
+            message_decrypte += dico[lettre]
+        else:
+            message_decrypte += lettre
+    return message_decrypte
