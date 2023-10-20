@@ -147,7 +147,7 @@ make format
 
 - Mypy avec :
 
-````bash
+```bash
 make typehint
 ```
 
