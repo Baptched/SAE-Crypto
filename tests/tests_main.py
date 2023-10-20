@@ -9,7 +9,7 @@ import unittest
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.append(os.path.join(ROOT, "src"))
 
-from main import affichage_message_numero_1
+from main import affichage_message_numero_1, affichage_message_numero_2
 
 
 class TestMain(unittest.TestCase):
@@ -25,3 +25,9 @@ class TestMain(unittest.TestCase):
         Fonction permettant de tester la méthode affichage_message_numero_1
         """
         self.assertIsNone(affichage_message_numero_1())
+
+    def test_affichage_message_numero_2(self):
+        """
+        Fonction permettant de tester la méthode affichage_message_numero_2
+        """
+        self.assertIsNone(affichage_message_numero_2())
