@@ -2,6 +2,8 @@
 Module permettant de decrypter le message numéro 2
 """
 
+import constantes as const
+
 
 def decrypte_vigenere(message: str, cle: str) -> str:
     """
@@ -16,17 +18,17 @@ def decrypte_vigenere(message: str, cle: str) -> str:
         str: Le message décrypté
     """
     message_decrypte = ""
-    index_cle = 0
-    if len(cle) == 0:
+    index_cle = const.INITIALISE_INDEX
+    if cle == "":
         return message.upper()
     for lettre in message:
         if lettre.isalpha():
             lettre_decrypte = chr(
-                (ord(lettre) - ord(cle[index_cle]) - ord("A") * 2) % 26 +
-                ord("A"))
-            index_cle += 1
+                (ord(lettre) - ord(cle[index_cle]) - ord("A") * const.DOUBLE) %
+                const.NOMBRE_LETTRES_ALPHABET + ord("A"))
+            index_cle += const.INCREMENTE_INDEX
             if index_cle == len(cle):
-                index_cle = 0
+                index_cle = const.INITIALISE_INDEX
         else:
             lettre_decrypte = lettre
         message_decrypte += lettre_decrypte

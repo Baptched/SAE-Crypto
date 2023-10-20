@@ -2,6 +2,16 @@
 Module pour les constantes
 """
 
+# Constantes 
+
+NOMBRE_LETTRES_ALPHABET = 26
+INCREMENTE_INDEX = 1
+INITIALISE_INDEX = 0
+PREMIER_CARACTERE = 0
+DOUBLE = 2
+
+
+
 # Message numéro 1
 
 MESSAGE_1 = '''BDQE PG OTQYUZ EQ OMOTQ GZ FDQEAD

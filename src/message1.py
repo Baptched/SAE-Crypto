@@ -2,6 +2,8 @@
 Module permettant de decrypter le message numéro 1
 """
 
+import constantes as const
+
 
 def decrypte_cesar(message: str, nb_decalage: int) -> str:
     """
@@ -25,10 +27,12 @@ def decrypte_cesar(message: str, nb_decalage: int) -> str:
             # ord permet de convertir un caractère en code ASCII
             if caractere.islower():
                 caractere_decrypte = chr(
-                    (ord(caractere) - nb_decalage - ord("a")) % 26 + ord("a"))
+                    (ord(caractere) - nb_decalage - ord("a")) %
+                    const.NOMBRE_LETTRES_ALPHABET + ord("a"))
             else:
                 caractere_decrypte = chr(
-                    (ord(caractere) - nb_decalage - ord("A")) % 26 + ord("A"))
+                    (ord(caractere) - nb_decalage - ord("A")) %
+                    const.NOMBRE_LETTRES_ALPHABET + ord("A"))
         else:
             caractere_decrypte = caractere
         message_decrypte += caractere_decrypte
@@ -52,5 +56,5 @@ def decrypte_acrostiche(message: str) -> str:
     lignes = message.split("\n")
     message_decrypte = ""
     for ligne in lignes:
-        message_decrypte += ligne[0]
+        message_decrypte += ligne[const.PREMIER_CARACTERE]
     return message_decrypte
