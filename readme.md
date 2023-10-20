@@ -1,7 +1,7 @@
 # SAE - Cryptographie
 
 Baptiste Chédeville
-GitHub : `https://github.com/Baptched/SAE-Crypto`
+GitHub : [Lien vers le projet](https://github.com/Baptched/SAE-Crypto)
 
 ## Origine du projet
 
@@ -9,7 +9,7 @@ Lors de la SAE Crypto, il nous a été donné plusieurs messages a décrypter.
 Pour cela, nous devions trouver nous même la méthode de chiffrement.
 Et d'implémenter des fonctions en python qui decrypte ces différents messages.
 
-## Ce qui a été fais
+## Réalisation
 
 ### Décryptage 
 
@@ -34,9 +34,9 @@ QZ MGOGZ OME FG ZQ PAUE EGOOAYNQD
 Ce message est crypté grâce à la méthode de César avec un décalage de 12. 
 Cette méthode consiste a décallé chaque lettre de l'alphabet d'un certains decallage, ici 12.
 
-(Fonction python dans le fichier `message1.py` de la ligne 8 à 39)
+(Python functions in `message1.py` from line 8 to 39)
 
-En décryptant ce message, l'on retourve :
+En le déchiffrant, nous obtenons :
 
 ```
 PRES DU CHEMIN SE CACHE UN TRESOR
@@ -52,7 +52,7 @@ EN AUCUN CAS TU NE DOIS SUCCOMBER
 
 Et enfin pour retrouver le mot caché, il faut utilisé la méthode de Acrostiche qui consiste a prendre la première lettre de chaque mot.
 
-(Fonction python dans le fichier `message1.py` de la ligne 42 à 60)
+(Python function in `message1.py` from line 42 to 60)
 
 On trouve donc le mot `PANGRAMME`
 
@@ -72,7 +72,7 @@ QF EXNFO UEHAMAEM RV MQEWPGR IRCTQ HTREOVRQ XE HUOYKIFGXXOA
 
 Ce message a été crypter avec la technique de Vigenère qui est une méthode de chiffrement par substitution polyalphabétique. Elle consiste à utiliser une clé  pour chiffrer un message. À chaque caractère du message, on applique un décalage variable basé sur la lettre correspondante de la clé.
 
-(Fonction python dans le fichier `message2.py` de la ligne 8 à 35)
+(Python functions in `message2.py` from line 8 to 35)
 
 On trouve le message :
 
@@ -87,7 +87,7 @@ En analysant ce message, il nous ai dit de faire un pangramme avec ce message et
 
 Un pangramme est un message contenant toutes les lettres de l'alphabet.
 
-(Fonction python dans le fichier `message2.py` de la ligne 38 à 52)
+(Python function in `message2.py` from line 38 to 52)
 
 On trouve donc le pangramme : `LEVIFZPHYRJUBSKMQATDCOWNGX`
 
@@ -99,7 +99,7 @@ Message numéro 3 :
 EALOK, OKCT LOFX PLPSF! UF VKIF L ZKCASYA FTD: FUYXFEFDH
 ```
 
-(Fonction python dans le fichier `message2.py` de la ligne 56 à 79)
+(Python function in `message2.py` from line 56 to 79)
 
 On trouve la phrase :
 
@@ -119,8 +119,8 @@ python3 src/main.py
 
 ### GitHub
 
-Tous au long de ce projet, un repertoire GitHub sera utilisé tout en respectant le Git Flow.
-Lien du GitHub : `https://github.com/Baptched/SAE-Crypto`
+Tout au long de ce projet, un référentiel GitHub a été utilisé en suivant la méthode de gestion des versions Git Flow.
+Lien du GitHub : [Lien vers le projet](https://github.com/Baptched/SAE-Crypto)
 
 
 ### Qualité de code
