@@ -1,6 +1,7 @@
 # SAE - Cryptographie
 
-Baptiste Chédeville
+Baptiste Chédeville  
+
 GitHub : [Lien vers le projet](https://github.com/Baptched/SAE-Crypto)
 
 ## Origine du projet
@@ -120,6 +121,7 @@ python3 src/main.py
 ### GitHub
 
 Tout au long de ce projet, un référentiel GitHub a été utilisé en suivant la méthode de gestion des versions Git Flow.
+
 Lien du GitHub : [Lien vers le projet](https://github.com/Baptched/SAE-Crypto)
 
 
