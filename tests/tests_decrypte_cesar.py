@@ -13,7 +13,7 @@ from message1 import decrypte_cesar
 import constantes as const
 
 
-class DecrypteCesar(unittest.TestCase):
+class TestDecrypteCesar(unittest.TestCase):
     """
     Classe permettant de faire les tests unitaires de la fonction decrypte_cesar
 

@@ -13,7 +13,7 @@ from message1 import decrypte_acrostiche
 import constantes as const
 
 
-class DecrypteAcrostiche(unittest.TestCase):
+class TestDecrypteAcrostiche(unittest.TestCase):
     """
     Classe permettant de faire les tests unitaires de la fonction decrypte_acrostiche
 
