@@ -33,3 +33,21 @@ def decrypte_vigenere(message: str, cle: str) -> str:
             lettre_decrypte = lettre
         message_decrypte += lettre_decrypte
     return message_decrypte
+
+
+def decrypte_pangramme(message: str) -> str:
+    """
+    Fonction permettant de récupérer le pangramme dans le message
+    C'est-à-dire uniquement la première apparition de chaque lettre de l'alphabet
+
+    Args:
+        message (str): Le message à analyser
+
+    Returns:
+        str: Le pangramme du message
+    """
+    message_decrypte = ""
+    for caractere in message:
+        if caractere.isalpha() and caractere not in message_decrypte:
+            message_decrypte += caractere
+    return message_decrypte
