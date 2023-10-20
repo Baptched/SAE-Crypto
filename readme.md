@@ -6,11 +6,11 @@ GitHub : [Lien vers le GitHub](https://github.com/Baptched/SAE-Crypto)
 
 ## Origine du projet
 
-Lors de la SAE Crypto, il nous a été donné plusieurs messages a décrypter.
+Lors de la SAE Crypto, il nous a été donné plusieurs messages à décrypter.
 Pour cela, nous devions trouver nous même la méthode de chiffrement.
-Et d'implémenter des fonctions en GitHub qui decrypte ces différents messages.
+Et implémenter des fonctions en GitHub qui decrypte ces différents messages.
 
-Cette SAE a pour but de nous faire implémenter les différentes méthodes de cryptage que nous avons vus lors de ce début d'année.
+Cette SAE a pour but de nous faire implémenter les différentes méthodes de cryptage que nous avons vu lors de ce début d'année.
 
 ## Réalisation
 
@@ -35,7 +35,7 @@ QZ MGOGZ OME FG ZQ PAUE EGOOAYNQD
 ```
 
 Ce message est crypté grâce à la méthode de César avec un décalage de 12. 
-Cette méthode consiste a décallé chaque lettre de l'alphabet d'un certains decallage, ici 12.
+Cette méthode consisteàà décaller chaque lettre de l'alphabet d'un certain decallage, ici 12.
 
 (GitHub functions in `message1.py` from line 8 to 39)
 
@@ -53,7 +53,7 @@ MEME SI LA FAIM TIRAILLE TES ENTRAILLES,
 EN AUCUN CAS TU NE DOIS SUCCOMBER
 ```
 
-Et enfin pour retrouver le mot caché, il faut utilisé la méthode de Acrostiche qui consiste a prendre la première lettre de chaque mot.
+Et enfin pour retrouver le mot caché, il faut utiliser la méthode de Acrostiche qui consiste à prendre la première lettre de chaque mot.
 
 (GitHub function in `message1.py` from line 42 to 60)
 
@@ -73,7 +73,7 @@ NR MRRPQD SU CXVMUQV HOHLWLQ CYT LRY GRQYMTRRY RPBMVXTVUES
 QF EXNFO UEHAMAEM RV MQEWPGR IRCTQ HTREOVRQ XE HUOYKIFGXXOA
 ```
 
-Ce message a été crypter avec la technique de Vigenère qui est une méthode de chiffrement par substitution polyalphabétique. Elle consiste à utiliser une clé  pour chiffrer un message. À chaque caractère du message, on applique un décalage variable basé sur la lettre correspondante de la clé.
+Ce message a été crypté avec la technique de Vigenère qui est une méthode de chiffrement par substitution polyalphabétique. Elle consiste à utiliser une clé  pour chiffrer un message. À chaque caractère du message, on applique un décalage variable basé sur la lettre correspondante de la clé.
 
 (GitHub functions in `message2.py` from line 8 to 35)
 
@@ -86,7 +86,7 @@ NE GARDEZ DU PREMIER SOUFFLE QUE LES PREMIERES APPARITIONS
 ET AINSI DEVOILEZ LE MESSAGE CACHE DERRIERE LA SUBSTITUTION
 ```
 
-En analysant ce message, il nous ai dit de faire un pangramme avec ce message et de faire une subtitution avec.
+En analysant ce message, il nous est dit de faire un pangramme avec ce message et de faire une substitution avec.
 
 Un pangramme est un message contenant toutes les lettres de l'alphabet.
 
@@ -94,7 +94,7 @@ Un pangramme est un message contenant toutes les lettres de l'alphabet.
 
 On trouve donc le pangramme : `LEVIFZPHYRJUBSKMQATDCOWNGX`
 
-En utilisant cette clé dans une subtitution sur le message numéro 3 qui nous ai donné.
+En utilisant cette clé dans une subtitution sur le message numéro 3 qui nous est donné.
 
 Message numéro 3 : 
 
@@ -112,7 +112,7 @@ BRAVO, VOUS AVEZ GAGNE! LE CODE A FOURNIR EST: ELIZEBETH
 
 ### Main
 
-Un fichier `main.py` permet de lancer les fonctions concu ainsi qu'afficher les resultats avec les messages cryptés qui nous ont été fournis.
+Un fichier `main.py` permet de lancer les fonctions conçues ainsi que d'afficher les resultats avec les messages cryptés qui nous ont été fournis.
 
 Le fichier main se lance avec la commande :
 
@@ -157,7 +157,7 @@ make typehint
 
 Ces trois commandes permmettent de maintenir une bonne syntaxe et qualité de code.
 
-Le makefile permet aussi de lancer les tests unitaires avec :
+Le Makefile permet aussi de lancer les tests unitaires avec :
 
 ```bash
 make tests
@@ -171,16 +171,16 @@ make coverage
 
 J'ai aussi mis en place sur le GitHub une GitHub Action qui reprend les commandes du Makefile.
 
-Cette GitHUb action verifie la qualité du code ainsi que les tests unitaires.
-Et pour passer cette GitHub Action, il faut obtenir 10/10 avec pylint, ne pas avoir de problème avec Mypy et que tous les tests unitaires passent.
+Cette GitHUb action vérifie la qualité du code ainsi que les tests unitaires.
+Et pour passer cette GitHub Action, il faut obtenir 10/10 avec Pylint, ne pas avoir de problème avec Mypy et que tous les tests unitaires passent.
 Cela permet de continuellement garder le GitHub propre ainsi que sans erreur.
 
-La workflows et retrouvale dans le fichier `.github/workflows/quality.yml`
+La workflows et retrouvable dans le fichier `.github/workflows/quality.yml`
 
 ### Tests unitaires
 
-Dans le répertoire tests, des tests unitaires on été implémenter pour tester de différentes façons les fonctions qui ont été implémenter.
-Les tests sont implémenter pour coubir 100% du code implémenté.
+Dans le répertoire `tests`, des tests unitaires on été implémenter pour tester de différentes façons les fonctions qui ont été implémentées.
+Les tests sont implémentés pour couvrir 100% du code implémenté.
 
 On peut lancer les tests avec la commande :
 
