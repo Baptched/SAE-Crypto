@@ -133,11 +133,37 @@ Pour installer les différentes commandes du Makefile, il faut exécuter la comm
 pip install -r requirements.txt
 ```
 
-Comme pylint grâce à la commande `make lint`, yapf avec `make yapf`, `make typehint` pour mypy.
+- Pylint grâce à la commande :
+
+```bash
+make lint
+```
+
+- Yapf avec 
+
+```bash
+make format
+```
+
+- Mypy avec :
+
+````bash
+make typehint
+```
 
 Ces trois commandes permmettent de maintenir une bonne syntaxe et qualité de code.
 
-Le makefile permet aussi de lancer les tests unitaires avec `make tests` et de voir le coverage de ces tests avec `make coverage`.
+Le makefile permet aussi de lancer les tests unitaires avec :
+
+```bash
+make tests
+```
+
+et de voir le coverage de ces tests avec 
+
+```bash
+make coverage
+```
 
 J'ai aussi mis en place sur le GitHub une GitHub action qui reprend les commandes du makefile.
 
@@ -148,5 +174,14 @@ Cette GitHUb action verifie la qualité du code ainsi que les tests unitaires.
 Dans le répertoire tests, des tests unitaires on été implémenter pour tester de différentes façons les fonctions qui ont été implémenter.
 Les tests sont implémenter pour coubir 100% du code impélmenté.
 
-On peut lancer les tests avec la commande `make tests`.
-Et le coverage de ces tests `make coverage`.
+On peut lancer les tests avec la commande :
+
+```bash
+make tests
+```
+
+Et le coverage de ces tests :
+
+```bash
+make coverage
+```
