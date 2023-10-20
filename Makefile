@@ -1,4 +1,4 @@
-MODULES = src/*.py tests/*.py
+MODULES = $(filter-out src/constantes.py, $(wildcard src/*.py)) tests/*.py
 
 .PHONY: typehint
 typehint:  
