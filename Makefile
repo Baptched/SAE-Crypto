@@ -1,5 +1,5 @@
-MODULES = $(filter-out */src/constantes.py, $(wildcard */src/*.py)) Défi1/tests/*.py Défi2/tests/*.py
-TESTS = $(wildcard */tests/*.py)
+MODULES = $(filter-out defi1/src/constantes.py, $(wildcard */src/*.py)) defi1/tests_defi1/*.py defi2/tests_defi2/*.py
+TESTS = $(wildcard */tests_*/*.py)
 
 .PHONY: typehint
 typehint:  
