@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./defi1/src",
+        "./defi2/src"
+    ]
+}
