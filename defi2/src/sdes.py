@@ -21,6 +21,7 @@ table_50 = (1, 0, 3, 2, 3, 2, 1, 0, 0, 2, 1, 3, 3, 1, 3, 2)
 table_s1 = (0, 1, 2, 3, 2, 0, 1, 3, 3, 0, 1, 0, 2, 1, 0, 3)
 table_p4 = (2, 4, 3, 1)
 
+
 def permuter(bit_entree: int, la_table_permutation: list):
     """
     Permute le byte d'entrée selon la table de permutation donnée
@@ -140,7 +141,10 @@ def crypter(cle, le_texte):
         fonction_feistel(
             generer_cles_sous_cles(cle)[1], echange_nibble(donnees)))
 
+
 def decrypt(key, ciphertext):
     """Decrypt ciphertext with given key"""
     donnees = fonction_feistel(generer_cles_sous_cles(key)[1], ip(ciphertext))
-    return fp(fonction_feistel(generer_cles_sous_cles(key)[0], echange_nibble(donnees)))
+    return fp(
+        fonction_feistel(
+            generer_cles_sous_cles(key)[0], echange_nibble(donnees)))
