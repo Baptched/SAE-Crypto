@@ -24,7 +24,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_lettre_minuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec des lettres minuscules
         """
         self.assertEqual(decrypte_substitution("a", const.CLE_SUBSTITUTION),
@@ -36,7 +36,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_lettre_majuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec des lettres majuscules
         """
         self.assertEqual(decrypte_substitution("A", const.CLE_SUBSTITUTION),
@@ -48,7 +48,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_caractere_special(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec des caractères spéciaux
         """
         self.assertEqual(decrypte_substitution(" ", const.CLE_SUBSTITUTION),
@@ -60,7 +60,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_chiffre(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec des chiffres
         """
         self.assertEqual(decrypte_substitution("1", const.CLE_SUBSTITUTION),
@@ -72,7 +72,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_cle_vide(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec une clé vide
         """
         self.assertEqual(decrypte_substitution("a", ""), None)
@@ -81,7 +81,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_cle_trop_courte(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec une clé trop courte
         """
         self.assertEqual(decrypte_substitution("a", "a"), None)
@@ -90,7 +90,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_cle_trop_longue(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec une clé trop longue
         """
         self.assertEqual(
@@ -104,7 +104,7 @@ class TestDecrypteSubstitution(unittest.TestCase):
 
     def test_decrypte_substitution_message_2(self):
         """
-        Fonction permettant de tester la fonction decrypte_substitution 
+        Fonction permettant de tester la fonction decrypte_substitution
         avec le message 2 décrypté
         """
         self.assertEqual(

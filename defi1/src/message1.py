@@ -7,9 +7,9 @@ import constantes as const
 
 def decrypte_cesar(message: str, nb_decalage: int) -> str:
     """
-    Fonction permettant de déchiffrer un message chiffré par la méthode de César 
+    Fonction permettant de déchiffrer un message chiffré par la méthode de César
     selon un décalage donné
-    Le message peut contenir des caractères spéciaux, des chiffres et des 
+    Le message peut contenir des caractères spéciaux, des chiffres et des
     lettres minuscules ou majuscules
 
     Args:
@@ -41,9 +41,9 @@ def decrypte_cesar(message: str, nb_decalage: int) -> str:
 
 def decrypte_acrostiche(message: str) -> str:
     """
-    Fonction permettant de déchiffrer un message chiffré par la méthode de 
+    Fonction permettant de déchiffrer un message chiffré par la méthode de
     l'acrostiche
-    Le message peut contenir des caractères spéciaux, des chiffres et des 
+    Le message peut contenir des caractères spéciaux, des chiffres et des
     lettres minuscules ou majuscules
 
     Args:

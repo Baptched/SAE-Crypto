@@ -24,7 +24,7 @@ class TestDecrypteCesar(unittest.TestCase):
 
     def test_decrypte_cesar_lettre_minuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_cesar 
+        Fonction permettant de tester la fonction decrypte_cesar
         avec des lettres minuscules
         """
         self.assertEqual(decrypte_cesar("a", 0), "a")
@@ -33,7 +33,7 @@ class TestDecrypteCesar(unittest.TestCase):
 
     def test_decrypte_cesar_lettre_majuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_cesar 
+        Fonction permettant de tester la fonction decrypte_cesar
         avec des lettres majuscules
         """
         self.assertEqual(decrypte_cesar("A", 0), "A")
@@ -42,7 +42,7 @@ class TestDecrypteCesar(unittest.TestCase):
 
     def test_decrypte_cesar_caractere_special(self):
         """
-        Fonction permettant de tester la fonction decrypte_cesar 
+        Fonction permettant de tester la fonction decrypte_cesar
         avec des caractères spéciaux
         """
         self.assertEqual(decrypte_cesar(" ", 0), " ")
@@ -51,7 +51,7 @@ class TestDecrypteCesar(unittest.TestCase):
 
     def test_decrypte_cesar_chiffre(self):
         """
-        Fonction permettant de tester la fonction decrypte_cesar 
+        Fonction permettant de tester la fonction decrypte_cesar
         avec des chiffres
         """
         self.assertEqual(decrypte_cesar("1", 0), "1")
@@ -60,7 +60,7 @@ class TestDecrypteCesar(unittest.TestCase):
 
     def test_decrypte_cesar_phrase(self):
         """
-        Fonction permettant de tester la fonction decrypte_cesar 
+        Fonction permettant de tester la fonction decrypte_cesar
         avec des phrases
         """
         self.assertEqual(decrypte_cesar("A b C", 0), "A b C")
