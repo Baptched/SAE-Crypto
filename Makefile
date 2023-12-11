@@ -1,4 +1,5 @@
-MODULES = $(filter-out src/constantes.py, $(wildcard src/*.py)) tests/*.py
+MODULES = $(filter-out defi1/src/constantes.py, $(wildcard */src/*.py)) defi1/tests_defi1/*.py defi2/tests_defi2/*.py
+TESTS = $(wildcard */tests_*/*.py)
 
 .PHONY: typehint
 typehint:  
@@ -6,7 +7,7 @@ typehint:
 
 .PHONY: tests
 tests:  
-	python3 -m unittest -v -b tests/*.py
+	python3 -m unittest -v -b ${TESTS}
 
 .PHONY: lint
 lint:  
@@ -18,8 +19,8 @@ format:
 
 .PHONY: coverage
 coverage:
-	python3 -m coverage run -m unittest
-	python3 -m coverage report ${MODULES}
+	python3 -m coverage run -m unittest -v -b ${TESTS}
+	python3 -m coverage report -m ${MODULES} ${TESTS}
 
 .PHONY: clean
 clean:  
