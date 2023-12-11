@@ -9,7 +9,7 @@ import unittest
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.append(os.path.join(ROOT, "src"))
 
-from double_sdes import crypte_double_sdes, decrypte_double_sdes, cassage_brutal
+from double_sdes import crypte_double_sdes, decrypte_double_sdes, cassage_brutal, cassage_astucieux
 
 
 class TestSDES(unittest.TestCase):
@@ -68,4 +68,27 @@ class TestSDES(unittest.TestCase):
                                             0b00000000)
         self.assertEqual(
             cassage_brutal(message_clair, message_crypte)[0:2],
+            (0b11100011, 0b00000000))
+
+    def test_cassage_astucieux(self):
+        """
+        Fonction permettant de tester la fonction cassage_astucieux
+        """
+        message_clair = "Je m'appelle Baptiste"
+        message_crypte = crypte_double_sdes(message_clair, 0b00000000,
+                                            0b11100011)
+        self.assertEqual(
+            cassage_astucieux(message_clair, message_crypte)[0:2],
+            (0b00000000, 0b11100011))
+        message_clair = "Bonjour"
+        message_crypte = crypte_double_sdes(message_clair, 0b00000000,
+                                            0b00000000)
+        self.assertEqual(
+            cassage_astucieux(message_clair, message_crypte)[0:2],
+            (0b00000000, 0b00000000))
+        message_clair = "Bonjour"
+        message_crypte = crypte_double_sdes(message_clair, 0b11100011,
+                                            0b00000000)
+        self.assertEqual(
+            cassage_astucieux(message_clair, message_crypte)[0:2],
             (0b11100011, 0b00000000))
