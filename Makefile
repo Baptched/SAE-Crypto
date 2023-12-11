@@ -30,4 +30,4 @@ clean:
 	find . -type f -name .coverage | xargs rm -fr
 
 .PHONY: verif
-verif: clean typehint tests lint coverage format clean
+verif: clean typehint lint coverage format clean
