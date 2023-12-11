@@ -24,7 +24,7 @@ class TestDecryptePangramme(unittest.TestCase):
 
     def test_decrypte_pangramme_lettre_minuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_pangramme 
+        Fonction permettant de tester la fonction decrypte_pangramme
         avec des lettres minuscules
         """
         self.assertEqual(decrypte_pangramme("a"), "a")
@@ -33,7 +33,7 @@ class TestDecryptePangramme(unittest.TestCase):
 
     def test_decrypte_pangramme_lettre_majuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_pangramme 
+        Fonction permettant de tester la fonction decrypte_pangramme
         avec des lettres majuscules
         """
         self.assertEqual(decrypte_pangramme("A"), "A")
@@ -42,7 +42,7 @@ class TestDecryptePangramme(unittest.TestCase):
 
     def test_decrypte_pangramme_caractere_special(self):
         """
-        Fonction permettant de tester la fonction decrypte_pangramme 
+        Fonction permettant de tester la fonction decrypte_pangramme
         avec des caractères spéciaux
         """
         self.assertEqual(decrypte_pangramme(" "), "")
@@ -51,7 +51,7 @@ class TestDecryptePangramme(unittest.TestCase):
 
     def test_decrypte_pangramme_chiffre(self):
         """
-        Fonction permettant de tester la fonction decrypte_pangramme 
+        Fonction permettant de tester la fonction decrypte_pangramme
         avec des chiffres
         """
         self.assertEqual(decrypte_pangramme("1"), "")
