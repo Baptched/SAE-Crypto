@@ -2,3 +2,4 @@ mypy
 pylint
 yapf
 coverage
+cryptography

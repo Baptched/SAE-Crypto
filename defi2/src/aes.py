@@ -42,3 +42,4 @@ def decrypte_aes(texte: str, cle: int) -> str:
         return texte_decrypte.decode()
     except Exception as e:
         raise Exception('Une erreur est survenue lors du décryptage') from e
+    
