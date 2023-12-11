@@ -24,7 +24,7 @@ class TestDecrypteVigenere(unittest.TestCase):
 
     def test_decrypte_vigenere_lettre_minuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_vigenere 
+        Fonction permettant de tester la fonction decrypte_vigenere
         avec des lettres minuscules
         """
         self.assertEqual(decrypte_vigenere("a", "a"), "A")
@@ -33,7 +33,7 @@ class TestDecrypteVigenere(unittest.TestCase):
 
     def test_decrypte_vigenere_lettre_majuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_vigenere 
+        Fonction permettant de tester la fonction decrypte_vigenere
         avec des lettres majuscules
         """
         self.assertEqual(decrypte_vigenere("A", "A"), "A")
@@ -42,7 +42,7 @@ class TestDecrypteVigenere(unittest.TestCase):
 
     def test_decrypte_vigenere_caractere_special(self):
         """
-        Fonction permettant de tester la fonction decrypte_vigenere 
+        Fonction permettant de tester la fonction decrypte_vigenere
         avec des caractères spéciaux
         """
         self.assertEqual(decrypte_vigenere(" ", " "), " ")
@@ -51,7 +51,7 @@ class TestDecrypteVigenere(unittest.TestCase):
 
     def test_decrypte_vigenere_chiffre(self):
         """
-        Fonction permettant de tester la fonction decrypte_vigenere 
+        Fonction permettant de tester la fonction decrypte_vigenere
         avec des chiffres
         """
         self.assertEqual(decrypte_vigenere("1", "1"), "1")
@@ -60,7 +60,7 @@ class TestDecrypteVigenere(unittest.TestCase):
 
     def test_decrypte_vigenere_cle_taille_differente(self):
         """
-        Fonction permettant de tester la fonction decrypte_vigenere 
+        Fonction permettant de tester la fonction decrypte_vigenere
         avec une clé de taille différente de la taille du message
         """
         self.assertEqual(decrypte_vigenere("a", ""), "A")

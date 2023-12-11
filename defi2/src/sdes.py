@@ -82,8 +82,8 @@ def generer_cles_sous_cles(cle):
     def decalage_gauche(liste_bits: list):
         """
         Effectue un décalage circulaire à gauche sur les premiers et les deuxièmes cinq bits
-        
-        Args:   
+
+        Args:
             liste_bits (list): La liste de bits à décaler
         """
         cle_decalee = [None] * taille_cle
@@ -108,7 +108,7 @@ def generer_cles_sous_cles(cle):
 def fonction_feistel(sous_cle, donnees):
     """
     Applique la fonction de Feistel sur les données avec la sous-clé donnée
-    
+
     Args:
         sous_cle (int): La sous-clé à utiliser
         donnees (int): Les données à utiliser

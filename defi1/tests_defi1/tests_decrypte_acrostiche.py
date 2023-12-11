@@ -24,7 +24,7 @@ class TestDecrypteAcrostiche(unittest.TestCase):
 
     def test_decrypte_acrostiche_lettre_minuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_acrostiche 
+        Fonction permettant de tester la fonction decrypte_acrostiche
         avec des lettres minuscules
         """
         self.assertEqual(decrypte_acrostiche("a"), "a")
@@ -33,7 +33,7 @@ class TestDecrypteAcrostiche(unittest.TestCase):
 
     def test_decrypte_acrostiche_lettre_majuscule(self):
         """
-        Fonction permettant de tester la fonction decrypte_acrostiche 
+        Fonction permettant de tester la fonction decrypte_acrostiche
         avec des lettres majuscules
         """
         self.assertEqual(decrypte_acrostiche("A"), "A")
@@ -42,7 +42,7 @@ class TestDecrypteAcrostiche(unittest.TestCase):
 
     def test_decrypte_acrostiche_caractere_special(self):
         """
-        Fonction permettant de tester la fonction decrypte_acrostiche 
+        Fonction permettant de tester la fonction decrypte_acrostiche
         avec des caractères spéciaux
         """
         self.assertEqual(decrypte_acrostiche(" "), " ")
@@ -51,7 +51,7 @@ class TestDecrypteAcrostiche(unittest.TestCase):
 
     def test_decrypte_acrostiche_chiffre(self):
         """
-        Fonction permettant de tester la fonction decrypte_acrostiche 
+        Fonction permettant de tester la fonction decrypte_acrostiche
         avec des chiffres
         """
         self.assertEqual(decrypte_acrostiche("1"), "1")
@@ -60,7 +60,7 @@ class TestDecrypteAcrostiche(unittest.TestCase):
 
     def test_decrypte_acrostiche_phrase(self):
         """
-        Fonction permettant de tester la fonction decrypte_acrostiche 
+        Fonction permettant de tester la fonction decrypte_acrostiche
         avec des phrases
         """
         self.assertEqual(decrypte_acrostiche("a b"), "a")
@@ -69,7 +69,7 @@ class TestDecrypteAcrostiche(unittest.TestCase):
 
     def test_decrypte_acrostiche_lignes(self):
         """
-        Fonction permettant de tester la fonction decrypte_acrostiche 
+        Fonction permettant de tester la fonction decrypte_acrostiche
         avec des lignes
         """
         self.assertEqual(decrypte_acrostiche("a\nb"), "ab")
@@ -78,7 +78,7 @@ class TestDecrypteAcrostiche(unittest.TestCase):
 
     def test_decrypte_acrostiche_message_1(self):
         """
-        Fonction permettant de tester la fonction decrypte_acrostiche 
+        Fonction permettant de tester la fonction decrypte_acrostiche
         avec le message 1 décrypté
         """
         self.assertEqual(decrypte_acrostiche(const.MESSAGE_1_DECRYPTE),

@@ -9,7 +9,7 @@ import unittest
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.append(os.path.join(ROOT, "src"))
 
-from double_sdes import crypte_double_sdes, decrypte_double_sdes
+from double_sdes import crypte_double_sdes, decrypte_double_sdes, cassage_brutal
 
 
 class TestSDES(unittest.TestCase):
@@ -46,3 +46,26 @@ class TestSDES(unittest.TestCase):
             decrypte_double_sdes("×²\x13(¾¶--²¹¹²\x13Õ¶-\x81þê\x81²",
                                  0b00000000, 0b11100011),
             "Je m'appelle Baptiste")
+
+    def test_cassage_brutal(self):
+        """
+        Fonction permettant de tester la fonction cassage_brutal
+        """
+        message_clair = "Je m'appelle Baptiste"
+        message_crypte = crypte_double_sdes(message_clair, 0b00000000,
+                                            0b11100011)
+        self.assertEqual(
+            cassage_brutal(message_clair, message_crypte)[0:2],
+            (0b00000000, 0b11100011))
+        message_clair = "Bonjour"
+        message_crypte = crypte_double_sdes(message_clair, 0b00000000,
+                                            0b00000000)
+        self.assertEqual(
+            cassage_brutal(message_clair, message_crypte)[0:2],
+            (0b00000000, 0b00000000))
+        message_clair = "Bonjour"
+        message_crypte = crypte_double_sdes(message_clair, 0b11100011,
+                                            0b00000000)
+        self.assertEqual(
+            cassage_brutal(message_clair, message_crypte)[0:2],
+            (0b11100011, 0b00000000))
