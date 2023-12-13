@@ -4,3 +4,4 @@ yapf
 coverage
 cryptography
 pycryptodome
+Pillow
