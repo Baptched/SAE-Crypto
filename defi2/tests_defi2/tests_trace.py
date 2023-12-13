@@ -11,9 +11,11 @@ sys.path.append(os.path.join(ROOT, "src"))
 
 from analyse_trace import decrypte_message_alice_et_bob
 
+
 class TestTrace(unittest.TestCase):
     """
-    Classe permettant de faire les tests unitaires de la recherche des messages cachés dans les images
+    Classe permettant de faire les tests unitaires de la
+    recherche des messages cachés dans les images
     """
 
     def test_decrypte_message_alice_et_bob(self):
@@ -22,5 +24,5 @@ class TestTrace(unittest.TestCase):
         """
         liste_messages: list[str] = decrypte_message_alice_et_bob()
         self.assertIsInstance(liste_messages, list)
-        self.assertEqual(liste_messages[0], "La crypto c'est trop bien !")
-        self.assertEqual(liste_messages[1], "")
+        self.assertEqual(liste_messages[0], "La crypto c'est trop bien!")
+        self.assertEqual(liste_messages[1], "Je suis complètement d'accord!")

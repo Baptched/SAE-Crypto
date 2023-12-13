@@ -15,7 +15,7 @@ def analyse_trace() -> list[tuple[bytes, bytes]]:
     Returns:
         list[tuple[bytes, bytes]]: La liste des données et des entêtes
     """
-    packets = rdpcap('defi2/sujet/trace_sae.cap')
+    packets = rdpcap('sujet/trace_sae.cap')
     liste: list[tuple[bytes, bytes]] = []
     for packet in packets:
         if packet.haslayer(UDP) and packet[UDP].dport == 9999:
@@ -31,8 +31,9 @@ def decrypte_message_alice_et_bob() -> list[str]:
     """
     les_messages = analyse_trace()
     cle = retrouve_cle() * 4
-    cle = int(cle, 2)  # Transforme la clé en int
-    cle_bytes = cle.to_bytes(32, byteorder='big')  #Transforme la clé en bytes
+    cle_int = int(cle, 2)  # Transforme la clé en int
+    cle_bytes = cle_int.to_bytes(32,
+                                 byteorder='big')  #Transforme la clé en bytes
     liste_messages: list[str] = []
     for message in les_messages:
         ciphertext = message[0]
