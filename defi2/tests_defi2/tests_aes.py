@@ -14,6 +14,7 @@ sys.path.append(os.path.join(ROOT, 'src'))
 from aes import crypte_aes, decrypte_aes, crypte_aes_cbc, cassage_brutal, decrypte_aes_cbc
 import constantes2 as c
 
+
 class TestAES(unittest.TestCase):
     """
     Classe permettant de faire les tests unitaires du AES
@@ -74,7 +75,7 @@ class TestAES(unittest.TestCase):
         Fonction permettant de tester la fonction decrypte_aes_cbc avec une clé invalide
         """
         iv = b'\x00' * 16
-        key = b'\x01' * 15 # Clé invalide
+        key = b'\x01' * 15  # Clé invalide
         ciphertext = b'\x00' * 16
         with self.assertRaises(Exception):
             decrypte_aes_cbc(iv, ciphertext, key)
@@ -85,7 +86,7 @@ class TestAES(unittest.TestCase):
         """
         iv = b'\x00' * 16
         key = b'\x01' * 16
-        ciphertext = b'\x00' * 15 # Message invalide
+        ciphertext = b'\x00' * 15  # Message invalide
         with self.assertRaises(Exception):
             decrypte_aes_cbc(iv, ciphertext, key)
 
