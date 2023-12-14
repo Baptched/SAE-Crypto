@@ -5,15 +5,19 @@ Module pour la stéganographie sur les images
 from PIL import Image
 
 
-def meme_image() -> bool:
+def meme_image(nom_image1: str, nom_image2: str) -> bool:
     """
     Fonction qui compare deux images pixel par pixel et qui renvoie True si elles sont identiques
+
+    Args:
+        nom_image1 (str): Le nom de la première image
+        nom_image2 (str): Le nom de la deuxième image
 
     Returns:
         bool: True si les images sont identiques, False sinon
     """
-    image = Image.open("sujet/rossignol1.bmp")
-    image2 = Image.open("sujet/rossignol2.bmp")
+    image = Image.open(nom_image1)
+    image2 = Image.open(nom_image2)
     nombre_colonne = image.size[0]
     nombre_ligne = image.size[1]
     for ind in range(nombre_ligne):

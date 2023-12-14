@@ -8,6 +8,7 @@ import time
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 
+
 def crypte_aes(texte: str, cle: int) -> str:
     """
     Fonction qui crypte un texte avec l'algorithme AES avec la bibliothèque cryptography
@@ -45,7 +46,8 @@ def decrypte_aes(texte: str, cle: int) -> str:
         return texte_decrypte.decode()
     except Exception as e:
         raise Exception('Une erreur est survenue lors du décryptage') from e
-    
+
+
 def crypte_aes_cbc(iv: bytes, plaintext: bytes, key: bytes) -> bytes:
     """
     Fonction qui crypte un texte avec l'algorithme AES en mode CBC avec la bibliothèque pycryptodome

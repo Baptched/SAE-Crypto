@@ -21,7 +21,12 @@ class TestSteganographie(unittest.TestCase):
         """
         Fonction permettant de tester la fonction meme_image
         """
-        self.assertFalse(meme_image())
+        self.assertFalse(
+            meme_image("sujet/rossignol1.bmp", "sujet/rossignol2.bmp"))
+        self.assertTrue(
+            meme_image("sujet/rossignol1.bmp", "sujet/rossignol1.bmp"))
+        self.assertTrue(
+            meme_image("sujet/rossignol2.bmp", "sujet/rossignol2.bmp"))
 
     def test_retrouve_cle(self):
         """
