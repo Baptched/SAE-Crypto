@@ -1,0 +1,7 @@
+mypy
+pylint
+yapf
+coverage
+cryptography
+pycryptodome
+Pillow
