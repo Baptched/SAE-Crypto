@@ -29,14 +29,16 @@ def meme_image(nom_image1: str, nom_image2: str) -> bool:
     return True
 
 
-def retrouve_cle() -> str:
+def retrouve_cle(nom_image: str = "sujet/rossignol2.bmp") -> str:
     """
     Fonction qui retrouve la clé de cryptage AES cachée dans l'image
 
+    Args:
+        nom_image (str, optional): Le nom de l'image. Defaults to "sujet/rossignol2.bmp".
     Returns:
         str: La clé de cryptage AES
     """
-    image2 = Image.open("sujet/rossignol2.bmp")
+    image2 = Image.open(nom_image)
     nombre_colonne, nombre_ligne = image2.size[0], image2.size[1]
     cle = ""
     cpt = 0
