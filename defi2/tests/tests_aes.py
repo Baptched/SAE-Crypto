@@ -11,7 +11,7 @@ from Crypto.Cipher import AES
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 sys.path.append(os.path.join(ROOT, 'src'))
 
-from aes import crypte_aes, decrypte_aes, crypte_aes_cbc, cassage_brutal, decrypte_aes_cbc
+from aes import crypte_aes, decrypte_aes, crypte_aes_cbc, cassage_brutal_aes, decrypte_aes_cbc, estimation_temps_cassage_brutal
 import constantes2 as c
 
 
@@ -90,9 +90,21 @@ class TestAES(unittest.TestCase):
         with self.assertRaises(Exception):
             decrypte_aes_cbc(iv, ciphertext, key)
 
-    def test_cassage_brutal(self):
+    def test_cassage_brutal_aes(self):
         """
-        Fonction permettant de tester la fonction cassage_brutal
+        Fonction permettant de tester la fonction cassage_brutal_aes
         """
         message_crypter = crypte_aes('Bonjour', 0b00000101)
-        self.assertEqual(cassage_brutal('Bonjour', message_crypter)[0], 5)
+        self.assertEqual(cassage_brutal_aes('Bonjour', message_crypter)[0], 5)
+
+    def test_estimation_temps_cassage_brutal(self):
+        """
+        Fonction permettant de tester la fonction estimation_temps_cassage_brutal
+        """
+        message_crypter = crypte_aes('Bonjour', 0b0)
+        message_crypter2 = crypte_aes('Bonjour', 23322)
+        self.assertIsInstance(
+            estimation_temps_cassage_brutal('Bonjour', message_crypter), tuple)
+        self.assertIsInstance(
+            estimation_temps_cassage_brutal('Bonjour', message_crypter2),
+            tuple)

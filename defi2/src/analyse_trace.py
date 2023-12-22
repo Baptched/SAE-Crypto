@@ -4,18 +4,19 @@ Module permettant de decrypter un trace reseau .cap
 
 from aes import decrypte_aes_cbc
 from scapy.all import rdpcap, Raw, UDP
-from steganographie import retrouve_cle
 from cryptography.hazmat.primitives.padding import PKCS7
 
 
-def analyse_trace() -> list[tuple[bytes, bytes]]:
+def retrouve_messages_trace(
+        chemin_trace: str = 'sujet/trace_sae.cap'
+) -> list[tuple[bytes, bytes]]:
     """
     Fonction permettant d'analyser le trace .cap
 
     Returns:
         list[tuple[bytes, bytes]]: La liste des données et des entêtes
     """
-    packets = rdpcap('sujet/trace_sae.cap')
+    packets = rdpcap(chemin_trace)
     liste: list[tuple[bytes, bytes]] = []
     for packet in packets:
         if packet.haslayer(UDP) and packet[UDP].dport == 9999:
@@ -25,13 +26,16 @@ def analyse_trace() -> list[tuple[bytes, bytes]]:
     return liste
 
 
-def decrypte_message_alice_et_bob() -> list[str]:
+def decrypte_message_alice_et_bob(
+        cle: str, les_messages: list[tuple[bytes, bytes]]) -> list[str]:
     """
-    Fonction qui decrypte les messages d'Alice et Bob dans le trace .cap
+    Fonction qui retrouve le message d'Alice et Bob
+
+    Args:
+        cle (int): La clé de cryptage
     """
-    les_messages = analyse_trace()
-    cle = retrouve_cle() * 4
-    cle_int = int(cle, 2)  # Transforme la clé en int
+    cle_128 = cle * 4
+    cle_int = int(cle_128, 2)  # Transforme la clé en int
     cle_bytes = cle_int.to_bytes(32,
                                  byteorder='big')  #Transforme la clé en bytes
     liste_messages: list[str] = []

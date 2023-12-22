@@ -89,8 +89,8 @@ def decrypte_aes_cbc(iv: bytes, ciphertext: bytes, key: bytes) -> str:
         raise Exception('Une erreur est survenue lors du décryptage') from e
 
 
-def cassage_brutal(message_clair: str,
-                   message_chiffre: str) -> tuple[int, int, float] | None:
+def cassage_brutal_aes(message_clair: str,
+                       message_chiffre: str) -> tuple[int, int, float] | None:
     """
     Fonction qui casse le cryptage AES en testant toutes les clés possibles
 
@@ -113,3 +113,31 @@ def cassage_brutal(message_clair: str,
             fin = time.time()
             return (cle, tentatives, fin - debut)
     return None
+
+
+def estimation_temps_cassage_brutal(
+        message_clair: str,
+        message_chiffre: str) -> tuple[float, float, float]:
+    """
+    Fonction qui estime le temps de cassage brutal de l'AES
+
+    Args:
+        message_clair (str): Le message clair
+        message_chiffre (str): Le message chiffré
+
+    Returns:
+        tuple: Le temps de calcul minimum, moyen et maximum
+    """
+    dubut = time.time()
+    for cle in range(1):
+        try:
+            message_decrypte = decrypte_aes(message_chiffre, cle)
+            if message_decrypte == message_clair:
+                pass
+        except Exception:
+            message_decrypte = None
+    fin = time.time()
+    temps_min = fin - dubut
+    temps_max = temps_min * c.NOMBRE_CLE_POSSIBLE_AES
+    temps_moy = temps_max / 2
+    return (temps_min, temps_moy, temps_max)
