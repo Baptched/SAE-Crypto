@@ -1,0 +1,20 @@
+
+
+Rapport en général :
+
+- Saute une page sur deux, et numérote les pages vides
+- Mauvaise numérotation des figures tous au long du rapport.
+- Fait référence à toutes ces figures et explique précisément la figure , ce qui est un bon point.
+
+Page de couverture :
+
+	- Photo non approprié
+
+Sommaire :
+
+	- Fait référence à la page de remerciement qui est avant le sommaire
+	- Sommaire bien détaillé et bien numéroté sauf certaines parties qui vont jusqu'à 2.2.3.2.2.1 ce qui fais beaucoup
+
+Introduction courte et claire comme demandé dans les consignes
+Nonne présentation de l'entreprise, peut-être un peu courte.
+Page 38 utilisation d'une image qui ne sert à rien.
